@@ -11,6 +11,8 @@
 
 <div id="content"></div>
 
+<div id="footer"></div>
+
 <script type="text/jsx">
 
 var MainComponent = React.createClass({
@@ -22,6 +24,17 @@ var MainComponent = React.createClass({
         });
 
         React.render(<MainComponent />, document.getElementById('content'));
+
+var SecondComponent = React.createClass({ 
+          render: function(){
+              return (
+                
+                        <h2>My second react component. awesome. </h2>
+                );
+}
+}); 
+
+        React.render(<SecondComponent /> , document.getElementById('footer')); 
 
 </script>
 
