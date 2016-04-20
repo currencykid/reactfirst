@@ -11,6 +11,8 @@
 
 <div id="content"></div>
 
+<div id="properties"></div>
+
 <div id="footer"></div>
 
 <script type="text/jsx">
@@ -36,6 +38,21 @@ var SecondComponent = React.createClass({
 
         React.render(<SecondComponent /> , document.getElementById('footer')); 
 
+var PropertiesComponent= React.createClass({
+            render: function() {
+                return (
+                        <h2> {this.props.user} first react component. nice. </h2>
+                );
+            }
+        });
+
+        React.render(<div> 
+                      <PropertiesComponent user="Jose" />
+                      <PropertiesComponent user="Carlos"/>
+                      <PropertiesComponent user="Rose"/>
+                      <PropertiesComponent user="Jack"/> 
+                      </div> , 
+                       document.getElementById('properties'));
 </script>
 
 </body>
